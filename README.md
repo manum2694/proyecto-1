@@ -8,4 +8,4 @@ El proyecto consiste en la implementación de una aplicación, basada en una u
 Como fue requerido, se determinó un nombre para la aplicación y el logo de la empresa. El nombre de la aplicación web es "PowerPass", y la empresa asociada se llama "Excalibur".
 
 ## Observaciones correspondientes al desarrollo:
-Surgieron dificultades a la hora de crear nuevos archivos JS que permitan separar distintos aspectos de la implementación de la utilidad online debido a que no encontré el modo de poder realizar imports y exports correspondientes en cada caso que pudiesen funcionar, luego de investigar en variedad de sitios web.
+
