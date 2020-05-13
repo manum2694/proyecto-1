@@ -41,7 +41,7 @@
         ultimoIndexUsado = 0;
       }
     }
-    localStorage.setItem("password" + (ultimoIndexUsado + 1),psw);
+    localStorage.setItem("password" + (ultimoIndexUsado + 1),btoa(psw));
     ultimoIndexUsado++;
     localStorage.setItem("ultimoIndexUsado",ultimoIndexUsado);
   }
@@ -73,7 +73,7 @@
         }
         else {
           coleccion += "<li class=\"collection-item fondoCol textoAlCentro\">";
-          coleccion += datoPsw + "</li>";
+          coleccion += atob(datoPsw) + "</li>";
           indexActual++;
         }        
       }
