@@ -75,6 +75,10 @@ body {
   font-weight: bold;
 }
 
+#espacioCopyright {
+  padding-top: 35px;
+}
+
 
 .textoAIzquierda {
   text-align: left;
