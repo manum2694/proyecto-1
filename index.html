@@ -1,18 +1,147 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerPass | Excalibur security</title>
+    <link rel="icon" href="./img/Exc.png" type="image/icon type">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/estiloPred.css" id="estilo">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
 
-    <title>Proyecto 1</title>
-  </head>
-  <body>
-    <h1>Proyecto 1</h1>
+</head>
 
-    <!-- JavaScript -->
+<body>
+    <!--Archivo javascript base-->
     <script src="js/app.js"></script>
-  </body>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+
+    <div class="navbar-fixed">
+        <nav id="barraNavegacion">
+            <div class="nav-wrapper container">
+                <a class="brand-logo">PowerPass</a>
+                <a href="#" data-target="menu-responsive" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>    
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#" onclick="cambiarTema()">
+                        <i class="material-icons right">brightness_4</i>
+                        Cambiar tema
+                        </a>
+                    </li>
+                </ul>
+    
+            </li>            
+        </nav>
+    </div>
+    <ul class="sidenav" id="menu-responsive">
+            <li><a onclick="cambiarTema()"><i class="material-icons right">brightness_4</i>Cambiar tema</a></li>        
+    </ul>
+    
+    <div class="container section" id="contenedorPrincipal">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="row">
+                <div class="col s3 m3 l4">
+                </div>
+                <div class="col s6 m6 l4">
+                    <div class="form-group">
+                        <input autocomplete="on" type="password" id="psw_box" class="entradaPassword" placeholder="Password" onkeyup="limpiarObs()">
+                    </div>
+                </div>
+                <div class="col s3 m3 l4">
+                    <form action="#">
+                        <p>
+                          <label>
+                            <input type="checkbox" onchange="cambiarVistaPassword()"/>
+                            <span>Mostrar password</span>
+                          </label>
+                        </p>
+                      </form>
+                </div>                   
+            </div>
+            <div class="row">
+                <div class="col s4 m5 l5"></div>
+                <div class="col s4 m2 l2">
+                    <div class="row">
+                        <div class="col s5 m5 l5"></div>
+                        <div class="col s2 m2 l2"></div>
+                            <button class="btn" id="btnAceptar" onclick="aceptarEntrada()">Evaluar</button>
+                        <div class="col s5 m5 l5"></div>
+                    </div>                    
+                    <div class="row textoAlCentro">
+                        
+                            <a id="btnHistorial" class="modal-trigger" href="#modalHistorial" onclick="mostrarHistorial()">
+                                Últimas entradas
+                                <i class="material-icons">history</i>                                 
+                            </a>
+
+                            <div id="modalHistorial" class="modal">
+                                <div class="modal-content">
+                                    <h5>Historial de entradas recientes</h5>
+                                    <br>
+                                    <div class="col s1"></div>
+                                    <div class="col s10">
+                                        <div id="reporteHistorial">                                        
+                                        </div>
+                                    </div>
+                                    <div class="col s1"></div>
+                                </div>
+                            </div>
+                                                
+                    </div>                    
+                </div>
+                <div class="col s4 m5 l5"></div>
+            </div>
+        </div>
+        <br>
+        <div id="zonaReporte">
+          <div class=row>
+            <div class="col s1 m2"></div>
+            <div class="col s10 m8" id="contenedorNota">          
+            </div>
+            <div class="col s1 m2"></div>
+          </div>
+          <div class=row>
+            <div class="col s1 m2"></div>
+            <div class="col s10 m8" id="contenedorLeyenda">          
+            </div>
+            <div class="col s1 m2"></div>
+          </div>
+          <div class=row>
+            <div class="col s1 m2"></div>
+            <div class="col s10 m8" id="reporteColeccion">
+            </div>
+            <div class="col s1 m2"></div>            
+          </div>
+        </div>
+        <br>        
+      </div>
+        
+    <footer class = "page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col s8" id="espacioCopyright">
+                        © 2020 - Excalibur security. Todos los derechos reservados.
+                    </div>
+                    <div class="col s4 textoADerecha">
+                        <img src="./img/Exc.png" width="90" height="90">
+                    </div>
+                </div>                
+            </div>
+        </div>    
+    </footer>
+
+</body>
 </html>
